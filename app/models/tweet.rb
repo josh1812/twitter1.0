@@ -5,7 +5,7 @@ class Tweet < ActiveRecord::Base
   def still_valid?
     created_at = self.created_at
     now = Time.now
-    if now - created_at  > 10
+    if now - created_at  > 20
       false
     else
       true
